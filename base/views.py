@@ -1,5 +1,9 @@
 from django.http import HttpResponse
 
+def home(request):
+     return HttpResponse("Ussd application", content_type="text/plain")
+    
+
 def ussd_callback(request):
     response = ""
     session_id = request.POST.get("sessionId", None)
